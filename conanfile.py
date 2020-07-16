@@ -22,7 +22,7 @@ class VulkanHeadersConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
-        cmake.configure(source_folder="hello")
+        cmake.configure(source_folder="Vulkan-Headers-sdk-{}".format(self.version))
         cmake.build()
 
         # Explicit way:
